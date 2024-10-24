@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from redis_app.router.cmd import router as cmd_router
-from redis_app.version import __version__
+from redis_app import __version__
 
 
 origin = getenv("ORIGIN", "*")
