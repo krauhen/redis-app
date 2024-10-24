@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+
+[project]
+name = "redis_app"
+authors = [{ name = "Henning Krause", email = "henning.krause@gft.com" }, ]
+maintainers = [{ name = "Henning Krause", email = "henning.krause@gft.com" }, ]
+description = "Description"
+readme = "README.md"
+keywords = []
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "asyncio",
+    "fastapi",
+    "requests",
+    "urllib3",
+    "uvicorn",
+    "numpy<2",
+    "redis",
+    "python-multipart"
+]
+requires-python = ">=3.10.6"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.black]
+line-length = 121
+
+[tool.pylint]
+max-line-length = 121
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+version_file = "src/redis_app/version.py"
+
+[tool.pytest.ini_options]
+markers = []
+log_cli = true
+log_cli_level = "INFO"
