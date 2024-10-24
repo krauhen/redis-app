@@ -6,9 +6,7 @@ build-backend = "flit_core.buildapi"
 name = "redis_app"
 authors = [{ name = "Henning Krause", email = "henning.krause@gft.com" }, ]
 maintainers = [{ name = "Henning Krause", email = "henning.krause@gft.com" }, ]
-description = "Description"
 readme = "README.md"
-keywords = []
 license = { text = "MIT" }
 classifiers = [
     "Programming Language :: Python",
